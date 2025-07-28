@@ -11,7 +11,7 @@ const Footer = () => {
             © {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
           </p>
           <p className="text-gray-500 text-sm flex items-center justify-center">
-            Made with <Heart size={16} className="mx-1 text-red-500" /> using React & Tailwind CSS
+            Made using React & Tailwind CSS
           </p>
         </div>
       </div>

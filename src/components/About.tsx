@@ -51,9 +51,9 @@ const About = () => {
 
           <div className="space-y-8">
             <div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-4">Frontend</h4>
+              <h4 className="text-xl font-semibold text-gray-900 mb-4">Programming Languages</h4>
               <div className="flex flex-wrap gap-2">
-                {skills.frontend.map((skill) => (
+                {skills.programingLanguages.map((skill) => (
                   <span
                     key={skill}
                     className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
@@ -65,9 +65,9 @@ const About = () => {
             </div>
 
             <div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-4">Backend</h4>
+              <h4 className="text-xl font-semibold text-gray-900 mb-4">Frameworks</h4>
               <div className="flex flex-wrap gap-2">
-                {skills.backend.map((skill) => (
+                {skills.frameworks.map((skill) => (
                   <span
                     key={skill}
                     className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium"
@@ -79,9 +79,9 @@ const About = () => {
             </div>
 
             <div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-4">Tools & Technologies</h4>
+              <h4 className="text-xl font-semibold text-gray-900 mb-4">Other Tools & Technologies</h4>
               <div className="flex flex-wrap gap-2">
-                {skills.tools.map((skill) => (
+                {skills.otherTools.map((skill) => (
                   <span
                     key={skill}
                     className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium"

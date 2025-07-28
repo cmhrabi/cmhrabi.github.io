@@ -45,12 +45,12 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-8 justify-between">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-gray-300 hover:text-white transition-colors"
+                className="text-lg text-gray-300 hover:text-white transition-colors"
               >
                 {item.label}
               </button>
@@ -63,7 +63,7 @@ const Header = () => {
               href={personalInfo.social.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-white transition-colors"
+              className="text-lg text-gray-300 hover:text-white transition-colors"
             >
               <Github size={20} />
             </a>
@@ -71,13 +71,13 @@ const Header = () => {
               href={personalInfo.social.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-white transition-colors"
+              className="text-lg text-gray-300 hover:text-white transition-colors"
             >
               <Linkedin size={20} />
             </a>
             <a
               href={`mailto:${personalInfo.email}`}
-              className="text-gray-300 hover:text-white transition-colors"
+              className="text-lg text-gray-300 hover:text-white transition-colors"
             >
               <Mail size={20} />
             </a>

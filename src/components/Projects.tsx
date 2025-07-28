@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
-import { ExternalLink, Github, ChevronLeft, ChevronRight, X } from 'lucide-react';
-import { projects } from '../data/portfolio';
+import { ExternalLink, Github, X } from 'lucide-react';
+import { Project, projects } from '../data/portfolio';
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const featuredProjects = projects.filter(project => project.featured);
   const otherProjects = projects.filter(project => !project.featured);
 
-  const ProjectCard = ({ project, featured = false }: { project: any; featured?: boolean }) => (
+  const ProjectCard = ({ project, featured = false }: { project: Project; featured?: boolean }) => (
     <div 
       className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer ${
         featured ? 'lg:col-span-2' : ''

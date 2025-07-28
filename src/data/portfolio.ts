@@ -1,70 +1,106 @@
 export const personalInfo = {
-  name: "Your Name",
+  name: "Calum Hrabi",
   title: "Full Stack Software Developer",
-  email: "your.email@example.com",
-  phone: "+1 (555) 123-4567",
-  location: "Your City, State",
+  email: "calum.hrabi@gmail.com",
+  location: "Toronto, ON, Canada",
   summary: "Passionate full stack developer with expertise in modern web technologies, creating scalable applications and user-centric solutions.",
   resumeUrl: "/resume.pdf", // Place your resume PDF in the public folder
   social: {
-    github: "https://github.com/yourusername",
-    linkedin: "https://linkedin.com/in/yourprofile",
-    portfolio: "https://yourwebsite.com",
-    twitter: "https://twitter.com/yourusername" // Optional
+    github: "https://github.com/cmhrabi",
+    linkedin: "https://linkedin.com/in/calum-hrabi",
   }
 };
 
 export const skills = {
-  frontend: ["React", "TypeScript", "Next.js", "Vue.js", "Tailwind CSS", "JavaScript"],
-  backend: ["Node.js", "Python", "Express", "FastAPI", "PostgreSQL", "MongoDB"],
-  tools: ["Git", "Docker", "AWS", "Vercel", "Figma", "Jest"],
-  languages: ["JavaScript", "TypeScript", "Python", "SQL", "HTML", "CSS"]
+  programingLanguages: ["Go", "TypeScript/JavaScript", "Python", "Java"],
+  frameworks: ["React", "React Native", "Express", "Flask", "Django", "SQLc", "TensorFlow", "Keras", "Pandas", "PySpark"],
+  otherTools: ["MySQL", "PostgreSQL", "NoSQL", "AWS", "Cloud Formation", "GCP", "Firebase", "Docker"],
 };
 
 export const experience = [
   {
     id: 1,
-    title: "Senior Full Stack Developer",
-    company: "Tech Company",
-    location: "Remote",
-    period: "2022 - Present",
+    title: "Full Stack Developer",
+    company: "Kablamo Canada Inc",
+    location: "Toronto, ON",
+    period: "June 2025 - Present",
     description: [
       "Led development of scalable web applications serving 10k+ users",
       "Architected microservices using Node.js and Docker",
       "Mentored junior developers and conducted code reviews",
       "Improved application performance by 40% through optimization"
     ],
-    technologies: ["React", "Node.js", "PostgreSQL", "AWS"]
+    technologies: ["Go", "PostgreSQL", "AWS", "React Native"]
   },
   {
     id: 2,
-    title: "Full Stack Developer",
-    company: "Startup Inc",
-    location: "San Francisco, CA",
-    period: "2020 - 2022",
+    title: "Full Stack Developer Intern",
+    company: "V2 Cloud Solutions",
+    location: "Montreal, QC",
+    period: "Sept 2024 - Jan 2025",
     description: [
       "Built responsive web applications using React and Express",
       "Designed and implemented RESTful APIs",
       "Collaborated with design team to create pixel-perfect UIs",
       "Implemented automated testing reducing bugs by 60%"
     ],
-    technologies: ["React", "Express", "MongoDB", "Jest"]
+    technologies: ["React", "Python", "Django", "PostgreSQL", "Docker"]
   },
   {
     id: 3,
-    title: "Frontend Developer",
-    company: "Digital Agency",
-    location: "New York, NY",
-    period: "2019 - 2020",
+    title: "Backend Developer Intern",
+    company: "Kablamo Canada Inc",
+    location: "Toronto, ON",
+    period: "Jan 2024 - May 2024",
     description: [
       "Developed client websites using modern JavaScript frameworks",
       "Optimized sites for SEO and performance",
       "Worked closely with clients to gather requirements",
       "Maintained legacy codebases and performed updates"
     ],
-    technologies: ["Vue.js", "JavaScript", "SCSS", "WordPress"]
+    technologies: ["Go", "PostgreSQL", "AWS",]
+  },
+  {
+    id: 4,
+    title: "Frontend Developer Intern",
+    company: "Kablamo Canada Inc",
+    location: "Toronto, ON",
+    period: "May 2023 - Aug 2023",
+    description: [
+      "Developed client websites using modern JavaScript frameworks",
+      "Optimized sites for SEO and performance",
+      "Worked closely with clients to gather requirements",
+      "Maintained legacy codebases and performed updates"
+    ],
+    technologies: ["React-Native", "Typescript", "Jest",]
+  },
+  {
+    id: 5,
+    title: "Full Stack Developer Intern",
+    company: "Vluence",
+    location: "Remote",
+    period: "Sept 2022 - Dec 2022",
+    description: [
+      "Developed client websites using modern JavaScript frameworks",
+      "Optimized sites for SEO and performance",
+      "Worked closely with clients to gather requirements",
+      "Maintained legacy codebases and performed updates"
+    ],
+    technologies: ["React-Native", "Python", "Flask", "MySQL", "GCP"]
   }
 ];
+
+export type Project = {
+  id: number;
+  title: string;
+  description: string;
+  longDescription: string;
+  image: string;
+  technologies: string[];
+  liveUrl: string;
+  githubUrl: string;
+  featured: boolean;
+};
 
 export const projects = [
   {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react';
+import { Mail, MapPin, Send, Github, Linkedin } from 'lucide-react';
 import { personalInfo } from '../data/portfolio';
 
 const Contact = () => {
@@ -38,13 +38,11 @@ const Contact = () => {
             Let's discuss how we can work together!
           </p>
         </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
-          <div className="space-y-8">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">Contact Information</h3>
+          <div className="grid grid-cols-2 gap-8">
             
             <div className="space-y-6">
+              <h3 className="text-2xl font-semibold text-gray-900 mb-6">Contact Information</h3>
               <div className="flex items-center">
                 <div className="bg-blue-100 p-3 rounded-lg mr-4">
                   <Mail className="text-blue-600" size={24} />
@@ -61,21 +59,6 @@ const Contact = () => {
               </div>
 
               <div className="flex items-center">
-                <div className="bg-green-100 p-3 rounded-lg mr-4">
-                  <Phone className="text-green-600" size={24} />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">Phone</h4>
-                  <a 
-                    href={`tel:${personalInfo.phone}`}
-                    className="text-gray-600 hover:text-gray-700 transition-colors"
-                  >
-                    {personalInfo.phone}
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-center">
                 <div className="bg-purple-100 p-3 rounded-lg mr-4">
                   <MapPin className="text-purple-600" size={24} />
                 </div>
@@ -87,8 +70,8 @@ const Contact = () => {
             </div>
 
             {/* Social Links */}
-            <div className="pt-8 border-t border-gray-200">
-              <h4 className="font-semibold text-gray-900 mb-4">Connect with me</h4>
+            <div className="pl-8 border-l border-gray-200 space-y-6">
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Connect with me</h3>
               <div className="flex space-x-4">
                 <a
                   href={personalInfo.social.github}
@@ -108,86 +91,8 @@ const Contact = () => {
                 </a>
               </div>
             </div>
-          </div>
 
-          {/* Contact Form */}
-          <div>
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">Send a Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                    placeholder="Your name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                    placeholder="your@email.com"
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                  placeholder="What's this about?"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                  Message *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows={6}
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                  placeholder="Your message..."
-                ></textarea>
-              </div>
-              
-              <button
-                type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
-              >
-                <Send size={20} className="mr-2" />
-                Send Message
-              </button>
-            </form>
           </div>
-        </div>
       </div>
     </section>
   );
