@@ -3,9 +3,9 @@ export const personalInfo = {
   title: "Full Stack Software Developer",
   email: "calum.hrabi@gmail.com",
   location: "Toronto, ON, Canada",
-  avatar: "/avatar.jpg",
+  avatar: "/my-website/avatar.jpg",
   summary: "Passionate full stack developer with expertise in modern web technologies, creating scalable applications and user-centric solutions.",
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "/my-website/resume.pdf",
   social: {
     github: "https://github.com/cmhrabi",
     linkedin: "https://linkedin.com/in/calum-hrabi",
