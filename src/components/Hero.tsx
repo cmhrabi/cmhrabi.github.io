@@ -19,8 +19,14 @@ const Hero = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
         <div className="text-center">
           <div className="mb-8 animate-fade-in">
+            <img
+              src={personalInfo.avatar}
+              alt={personalInfo.name}
+              className="w-44 h-44 rounded-full mx-auto mb-4 shadow-lg"
+            />
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
               <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                 {personalInfo.name}
