@@ -17,13 +17,14 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="grid grid-cols-2 gap-8">
             
-            <div className="space-y-6">
+            <div className="flex flex-col text-center items-center">
               <h3 className="text-2xl font-semibold text-gray-900 mb-6">Contact Information</h3>
-              <div className="flex items-center">
+              <div className="flex flex-col justify-center space-y-4">
+              <div className="flex">
                 <div className="bg-blue-100 p-3 rounded-lg mr-4">
                   <Mail className="text-blue-600" size={24} />
                 </div>
-                <div>
+                <div className="text-left">
                   <h4 className="font-semibold text-gray-900">Email</h4>
                   <a 
                     href={`mailto:${personalInfo.email}`}
@@ -34,21 +35,21 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-center">
+              <div className="flex">
                 <div className="bg-purple-100 p-3 rounded-lg mr-4">
                   <MapPin className="text-purple-600" size={24} />
                 </div>
-                <div>
+                <div className="text-left">
                   <h4 className="font-semibold text-gray-900">Location</h4>
                   <p className="text-gray-600">{personalInfo.location}</p>
                 </div>
               </div>
             </div>
-
+            </div>
             {/* Social Links */}
-            <div className="pl-8 border-l border-gray-200 space-y-6">
+            <div className="pl-8 border-l border-gray-200 space-y-6 text-center">
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">Connect with me</h3>
-              <div className="flex space-x-4">
+              <div className="flex justify-center space-x-4">
                 <a
                   href={personalInfo.social.github}
                   target="_blank"

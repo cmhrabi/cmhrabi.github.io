@@ -34,8 +34,9 @@ const Header = () => {
       isScrolled ? 'bg-gray-900/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          <div className="flex items-center">
+        <div className="flex items-center py-4">
+          {/* Logo - Fixed width */}
+          <div className="flex items-center w-24">
             <button
               onClick={() => scrollToSection('hero')}
               className="text-xl font-bold text-white hover:text-blue-400 transition-colors"
@@ -44,8 +45,8 @@ const Header = () => {
             </button>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8 justify-between">
+          {/* Desktop Navigation - Centered */}
+          <nav className="hidden md:flex flex-1 justify-center space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -57,8 +58,8 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Social Links */}
-          <div className="hidden md:flex items-center space-x-4">
+          {/* Social Links - Fixed width */}
+          <div className="hidden md:flex items-center justify-end space-x-4 w-24">
             <a
               href={personalInfo.social.github}
               target="_blank"

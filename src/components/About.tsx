@@ -18,17 +18,8 @@ const About = () => {
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
                 I'm a dedicated full stack developer with a passion for creating innovative 
-                solutions that make a real impact. With years of experience in both frontend 
+                solutions that make a real impact. With multiple years of experience in both frontend 
                 and backend development, I specialize in building scalable, user-centric applications.
-              </p>
-              <p>
-                My journey in software development started with curiosity about how things work 
-                on the web. Today, I've had the privilege of working with startups and established 
-                companies, helping them bring their digital visions to life.
-              </p>
-              <p>
-                When I'm not coding, you can find me exploring new technologies, contributing to 
-                open source projects, or sharing knowledge with the developer community.
               </p>
             </div>
 

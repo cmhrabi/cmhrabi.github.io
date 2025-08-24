@@ -1,6 +1,6 @@
 export const personalInfo = {
   name: "Calum Hrabi",
-  title: "Full Stack Software Developer",
+  title: "Software Developer",
   email: "calum.hrabi@gmail.com",
   location: "Toronto, ON, Canada",
   avatar: "/my-website/avatar.jpg",
@@ -13,7 +13,7 @@ export const personalInfo = {
 };
 
 export const skills = {
-  programingLanguages: ["Go", "TypeScript/JavaScript", "Python", "Java"],
+  programingLanguages: ["Go", "TypeScript/JavaScript", "Python"],
   frameworks: ["React", "React Native", "Express", "Flask", "Django", "SQLc", "TensorFlow", "Keras", "Pandas", "PySpark"],
   otherTools: ["MySQL", "PostgreSQL", "NoSQL", "AWS", "Cloud Formation", "GCP", "Firebase", "Docker"],
 };
@@ -21,73 +21,76 @@ export const skills = {
 export const experience = [
   {
     id: 1,
-    title: "Full Stack Developer",
+    title: "Full-Stack Developer",
     company: "Kablamo Canada Inc",
     location: "Toronto, ON",
     period: "June 2025 - Present",
     description: [
-      "Led development of scalable web applications serving 10k+ users",
-      "Architected microservices using Node.js and Docker",
-      "Mentored junior developers and conducted code reviews",
-      "Improved application performance by 40% through optimization"
+      "Developed backend microservices using Go and AWS to manage requests for a Fin-tech Mobile Application",
+      "Improved domain model for the product fulfillment service to support new features and improve scalability"
     ],
-    technologies: ["Go", "PostgreSQL", "AWS", "React Native"]
+    technologies: ["Go", "AWS", "React Native", "Terraform"]
   },
   {
     id: 2,
-    title: "Full Stack Developer Intern",
+    title: "Full-Stack Software Developer Co-op",
     company: "V2 Cloud Solutions",
     location: "Montreal, QC",
     period: "Sept 2024 - Jan 2025",
     description: [
-      "Built responsive web applications using React and Express",
-      "Designed and implemented RESTful APIs",
-      "Collaborated with design team to create pixel-perfect UIs",
-      "Implemented automated testing reducing bugs by 60%"
+      "Designed and implemented APIs using Python and Django for SaaS cloud services dashboard",
+      "Built React frontend features aligned with Figma designs for seamless user experience"
     ],
-    technologies: ["React", "Python", "Django", "PostgreSQL", "Docker"]
+    technologies: ["Python", "Django", "React", "Tailwind CSS"]
   },
   {
     id: 3,
-    title: "Backend Developer Intern",
+    title: "Back-End Software Developer Co-op",
     company: "Kablamo Canada Inc",
     location: "Toronto, ON",
     period: "Jan 2024 - May 2024",
     description: [
-      "Developed client websites using modern JavaScript frameworks",
-      "Optimized sites for SEO and performance",
-      "Worked closely with clients to gather requirements",
-      "Maintained legacy codebases and performed updates"
+      "Developed serverless backend using Golang and AWS Lambda for Fin-tech Mobile Application",
+      "Implemented AWS Kinesis Data Stream for real-time Lambda API logs to Datadog",
+      "Created CLI tool using Go and Cobra for unit test coverage reports across 80+ repositories"
     ],
-    technologies: ["Go", "PostgreSQL", "AWS",]
+    technologies: ["Go", "AWS", "Datadog", "Cobra"]
   },
   {
     id: 4,
-    title: "Frontend Developer Intern",
+    title: "Front-End Software Developer Co-op",
     company: "Kablamo Canada Inc",
     location: "Toronto, ON",
     period: "May 2023 - Aug 2023",
     description: [
-      "Developed client websites using modern JavaScript frameworks",
-      "Optimized sites for SEO and performance",
-      "Worked closely with clients to gather requirements",
-      "Maintained legacy codebases and performed updates"
+      "Developed frontend for Fin-tech Mobile Application using React-Native and TypeScript",
+      "Collaborated with teams to overhaul UI and implement new components from Figma designs"
     ],
-    technologies: ["React-Native", "Typescript", "Jest",]
+    technologies: ["React-Native", "TypeScript", "Figma"]
   },
   {
     id: 5,
-    title: "Full Stack Developer Intern",
+    title: "Full-Stack Developer Co-op",
     company: "Vluence",
     location: "Remote",
-    period: "Sept 2022 - Dec 2022",
+    period: "Sept 2022 - May 2023",
     description: [
-      "Developed client websites using modern JavaScript frameworks",
-      "Optimized sites for SEO and performance",
-      "Worked closely with clients to gather requirements",
-      "Maintained legacy codebases and performed updates"
+      "Developed React-Native components using TypeScript for social media mobile application",
+      "Created REST APIs using Express for CRUD operations",
+      "Implemented ETL pipeline using Python, Pandas, BS4, and PostgreSQL for SEC filing data"
     ],
-    technologies: ["React-Native", "Python", "Flask", "MySQL", "GCP"]
+    technologies: ["React-Native", "TypeScript", "Express", "Python", "Pandas", "BS4", "PostgreSQL"]
+  },
+  {
+    id: 6,
+    title: "Software Developer Co-op",
+    company: "Environment and Climate Change Canada",
+    location: "Remote",
+    period: "Jan 2022 - April 2022",
+    description: [
+      "Developed REST APIs using Python, Flask and Jinja2 for CITES Canada permit system"
+    ],
+    technologies: ["Python", "Flask", "Jinja2"]
   }
 ];
 
@@ -98,54 +101,37 @@ export type Project = {
   longDescription: string;
   image: string;
   technologies: string[];
-  liveUrl: string;
+  liveUrl?: string;
   githubUrl: string;
-  featured: boolean;
 };
 
 export const projects = [
   {
     id: 1,
-    title: "E-commerce Platform",
-    description: "Full-featured e-commerce platform with payment processing, inventory management, and admin dashboard.",
-    longDescription: "A comprehensive e-commerce solution built with modern technologies, featuring user authentication, product catalog, shopping cart, payment integration with Stripe, order management, and a powerful admin dashboard for inventory and sales analytics.",
-    image: "https://images.pexels.com/photos/4968639/pexels-photo-4968639.jpeg?auto=compress&cs=tinysrgb&w=800",
-    technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Tailwind CSS"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/yourusername/ecommerce-platform",
-    featured: true
+    title: "Compass",
+    description: "A tool that helps users analyze the LCCA for different technologies and scenarios.",
+    longDescription: "A tool that helps users analyze the levelized cost of carbon abatement for different technologies and scenarios.",
+    image: "/my-website/compass.png",
+    technologies: ["TypeScript", "React", "Tailwind CSS", "Python", "Flask"],
+    liveUrl: "https://compasslcca.netlify.app",
+    githubUrl: "https://github.com/cmhrabi/abbcari-LCCA-ammonia"
   },
   {
     id: 2,
-    title: "Task Management App",
-    description: "Collaborative task management application with real-time updates and team collaboration features.",
-    longDescription: "A modern task management solution that enables teams to collaborate effectively with features like real-time updates, file attachments, comments, time tracking, and advanced filtering and search capabilities.",
-    image: "https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=800",
-    technologies: ["Next.js", "TypeScript", "Supabase", "Socket.io"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/yourusername/task-manager",
-    featured: true
+    title: "SoundBite",
+    description: "AI Meeting Transcription and Summarization",
+    longDescription: "A comprehensive transcription and summarization platform that created a full-stack application using GCP Speech-to-Text and ChatGPT-3 APIs to generate customized summaries of audio snippets, improving accessibility to spoken content. The system implements secure user authentication with Firebase and manages CRUD operations with Express and Node.js to enable smooth data handling and user account management.",
+    image: "/my-website/soundbite.png",
+    technologies: ["GCP Speech-to-Text", "ChatGPT-3 API", "Firebase", "Express", "Node.js"],
+    githubUrl: "https://github.com/cmhrabi/soundbite-ai"
   },
   {
     id: 3,
-    title: "Weather Dashboard",
-    description: "Beautiful weather dashboard with location-based forecasts and interactive charts.",
-    longDescription: "An intuitive weather application that provides detailed weather information with beautiful visualizations, location-based forecasts, weather maps, and historical data analysis using multiple weather APIs.",
-    image: "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800",
-    technologies: ["React", "Chart.js", "OpenWeather API", "Tailwind CSS"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/yourusername/weather-dashboard",
-    featured: false
+    title: "Machine Learning Crypto Trader",
+    description: "Recurrent neural network cryptocurrency trading system that predicts Ethereum prices",
+    longDescription: "A sophisticated machine learning system that predicted the hourly price of Ethereum with <0.1 Mean Average Percent Error using a Bi-directional LSTM neural network with TensorFlow/Keras, based on historical time-series data. The system implements an ETL pipeline to process real-time and batch data, using Kafka, PySpark, Pandas, Keras, and MongoDB to optimize the precision of the model.",
+    image: "/my-website/crypto.png",
+    technologies: ["TensorFlow", "Keras", "Bi-directional LSTM", "Kafka", "PySpark", "Pandas", "MongoDB"],
+    githubUrl: "https://github.com/ammar-s847/ACA-Trading-Bot"
   },
-  {
-    id: 4,
-    title: "Social Media Analytics",
-    description: "Analytics dashboard for social media metrics with data visualization and reporting features.",
-    longDescription: "A comprehensive analytics platform that aggregates social media data from multiple platforms, provides detailed insights through interactive charts and graphs, and generates automated reports for social media managers.",
-    image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800",
-    technologies: ["Vue.js", "Python", "FastAPI", "Chart.js", "PostgreSQL"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/yourusername/social-analytics",
-    featured: false
-  }
 ];
