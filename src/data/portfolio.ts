@@ -3,9 +3,9 @@ export const personalInfo = {
   title: "Software Developer",
   email: "calum.hrabi@gmail.com",
   location: "Toronto, ON, Canada",
-  avatar: "/my-website/avatar.jpg",
+  avatar: "/avatar.jpg",
   summary: "Passionate full stack developer with expertise in modern web technologies, creating scalable applications and user-centric solutions.",
-  resumeUrl: "/my-website/resume.pdf",
+  resumeUrl: "/resume.pdf",
   social: {
     github: "https://github.com/cmhrabi",
     linkedin: "https://linkedin.com/in/calum-hrabi",
@@ -111,7 +111,7 @@ export const projects = [
     title: "Compass",
     description: "A tool that helps users analyze the LCCA for different technologies and scenarios.",
     longDescription: "A tool that helps users analyze the levelized cost of carbon abatement for different technologies and scenarios.",
-    image: "/my-website/compass.png",
+    image: "/compass.png",
     technologies: ["TypeScript", "React", "Tailwind CSS", "Python", "Flask"],
     liveUrl: "https://compasslcca.netlify.app",
     githubUrl: "https://github.com/cmhrabi/abbcari-LCCA-ammonia"
@@ -121,7 +121,7 @@ export const projects = [
     title: "SoundBite",
     description: "AI Meeting Transcription and Summarization",
     longDescription: "A comprehensive transcription and summarization platform that created a full-stack application using GCP Speech-to-Text and ChatGPT-3 APIs to generate customized summaries of audio snippets, improving accessibility to spoken content. The system implements secure user authentication with Firebase and manages CRUD operations with Express and Node.js to enable smooth data handling and user account management.",
-    image: "/my-website/soundbite.png",
+    image: "/soundbite.png",
     technologies: ["GCP Speech-to-Text", "ChatGPT-3 API", "Firebase", "Express", "Node.js"],
     githubUrl: "https://github.com/cmhrabi/soundbite-ai"
   },
@@ -130,7 +130,7 @@ export const projects = [
     title: "Machine Learning Crypto Trader",
     description: "Recurrent neural network cryptocurrency trading system that predicts Ethereum prices",
     longDescription: "A sophisticated machine learning system that predicted the hourly price of Ethereum with <0.1 Mean Average Percent Error using a Bi-directional LSTM neural network with TensorFlow/Keras, based on historical time-series data. The system implements an ETL pipeline to process real-time and batch data, using Kafka, PySpark, Pandas, Keras, and MongoDB to optimize the precision of the model.",
-    image: "/my-website/crypto.png",
+    image: "/crypto.png",
     technologies: ["TensorFlow", "Keras", "Bi-directional LSTM", "Kafka", "PySpark", "Pandas", "MongoDB"],
     githubUrl: "https://github.com/ammar-s847/ACA-Trading-Bot"
   },
