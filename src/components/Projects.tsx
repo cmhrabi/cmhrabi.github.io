@@ -5,14 +5,9 @@ import { Project, projects } from '../data/portfolio';
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
 
-  const featuredProjects = projects.filter(project => project.featured);
-  const otherProjects = projects.filter(project => !project.featured);
-
-  const ProjectCard = ({ project, featured = false }: { project: Project; featured?: boolean }) => (
+  const ProjectCard = ({ project }: { project: Project }) => (
     <div 
-      className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer ${
-        featured ? 'lg:col-span-2' : ''
-      }`}
+      className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer"
       onClick={() => setSelectedProject(project.id)}
     >
       <div className="relative overflow-hidden">
@@ -49,16 +44,18 @@ const Projects = () => {
         </div>
         
         <div className="flex space-x-3">
-          <a
-            href={project.liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center text-blue-600 hover:text-blue-700 transition-colors"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <ExternalLink size={16} className="mr-1" />
-            <span className="text-sm">Live Demo</span>
-          </a>
+          {project.liveUrl && (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center text-blue-600 hover:text-blue-700 transition-colors"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <ExternalLink size={16} className="mr-1" />
+              <span className="text-sm">Live Demo</span>
+            </a>
+          )}
           <a
             href={project.githubUrl}
             target="_blank"
@@ -116,15 +113,17 @@ const Projects = () => {
             </div>
             
             <div className="flex space-x-4">
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center"
-              >
-                <ExternalLink size={20} className="mr-2" />
-                View Live Demo
-              </a>
+              {project.liveUrl && (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center"
+                >
+                  <ExternalLink size={20} className="mr-2" />
+                  View Live Demo
+                </a>
+              )}
               <a
                 href={project.githubUrl}
                 target="_blank"
@@ -145,7 +144,7 @@ const Projects = () => {
     <section id="projects" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Projects</h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Here are some of my recent projects that showcase my skills and experience 
@@ -153,24 +152,12 @@ const Projects = () => {
           </p>
         </div>
 
-        {/* Featured Projects */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-          {featuredProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} featured />
+        {/* All Projects */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
           ))}
         </div>
-
-        {/* Other Projects */}
-        {otherProjects.length > 0 && (
-          <>
-            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Other Projects</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {otherProjects.map((project) => (
-                <ProjectCard key={project.id} project={project} />
-              ))}
-            </div>
-          </>
-        )}
       </div>
 
       <ProjectModal />
