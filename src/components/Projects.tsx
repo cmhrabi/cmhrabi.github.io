@@ -82,7 +82,7 @@ const Projects = () => {
         <div className="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
           <div className="relative">
             <img
-              src={project.image}
+              src={project.modalImage || project.image}
               alt={project.title}
               className="w-full h-64 object-cover"
             />

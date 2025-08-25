@@ -14,8 +14,8 @@ export const personalInfo = {
 
 export const skills = {
   programingLanguages: ["Go", "TypeScript/JavaScript", "Python"],
-  frameworks: ["React", "React Native", "Express", "Flask", "Django", "SQLc", "TensorFlow", "Keras", "Pandas", "PySpark"],
-  otherTools: ["MySQL", "PostgreSQL", "NoSQL", "AWS", "Cloud Formation", "GCP", "Firebase", "Docker"],
+  frameworks: ["React", "React Native", "Express", "Flask", "Django", "SQLc", "TensorFlow", "Pandas"],
+  otherTools: ["Terraform", "AWS", "Cloud Formation", "GCP", "Firebase", "SQL", "Docker"],
 };
 
 export const experience = [
@@ -100,6 +100,7 @@ export type Project = {
   description: string;
   longDescription: string;
   image: string;
+  modalImage?: string;
   technologies: string[];
   liveUrl?: string;
   githubUrl: string;
@@ -111,7 +112,8 @@ export const projects = [
     title: "Compass",
     description: "A tool that helps users analyze the LCCA for different technologies and scenarios.",
     longDescription: "A tool that helps users analyze the levelized cost of carbon abatement for different technologies and scenarios.",
-    image: "/compass.png",
+    image: "/compass2.png",
+    modalImage: "/compass.png",
     technologies: ["TypeScript", "React", "Tailwind CSS", "Python", "Flask"],
     liveUrl: "https://compasslcca.netlify.app",
     githubUrl: "https://github.com/cmhrabi/abbcari-LCCA-ammonia"
