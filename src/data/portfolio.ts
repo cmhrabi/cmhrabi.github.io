@@ -85,7 +85,7 @@ export const experience = [
     id: 6,
     title: "Software Developer Co-op",
     company: "Environment and Climate Change Canada",
-    location: "Remote",
+    location: "Gatineau, QC",
     period: "Jan 2022 - April 2022",
     description: [
       "Developed REST APIs using Python, Flask and Jinja2 for CITES Canada permit system"
