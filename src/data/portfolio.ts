@@ -14,8 +14,8 @@ export const personalInfo = {
 
 export const skills = {
   programingLanguages: ["Go", "TypeScript/JavaScript", "Python"],
-  frameworks: ["React", "React Native", "Express", "Flask", "Django", "SQLc", "TensorFlow", "Pandas"],
-  otherTools: ["Terraform", "AWS", "Cloud Formation", "GCP", "Firebase", "SQL", "Docker"],
+  frameworks: ["React", "React Native", "Express", "Flask", "Django", "SQLc", "Google ADK", "TensorFlow", "Pandas"],
+  otherTools: ["Claude Code", "Google AI Studio", "Terraform", "AWS", "Cloud Formation", "GCP", "Firebase", "SQL", "Docker"],
 };
 
 export const experience = [
