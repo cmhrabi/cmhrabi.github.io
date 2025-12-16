@@ -39,7 +39,7 @@ const Header = () => {
           <div className="flex items-center w-24">
             <button
               onClick={() => scrollToSection('hero')}
-              className="text-xl font-bold text-white hover:text-blue-400 transition-colors"
+              className="text-xl font-bold text-white hover:text-primary-400 transition-colors"
             >
               {personalInfo.name.split(' ').map(name => name[0]).join('')}
             </button>

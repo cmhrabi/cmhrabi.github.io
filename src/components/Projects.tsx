@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ExternalLink, Github, X } from 'lucide-react';
 import { Project, projects } from '../data/portfolio';
+import Badge from './Badge';
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
@@ -29,12 +30,12 @@ const Projects = () => {
         
         <div className="flex flex-wrap gap-2 mb-4">
           {project.technologies.slice(0, 3).map((tech: string) => (
-            <span
+            <Badge
               key={tech}
-              className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-medium"
-            >
-              {tech}
-            </span>
+              label={tech}
+              variant="primary-light"
+              size="sm"
+            />
           ))}
           {project.technologies.length > 3 && (
             <span className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs">
@@ -49,7 +50,7 @@ const Projects = () => {
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center text-blue-600 hover:text-blue-700 transition-colors"
+              className="flex items-center text-primary-600 hover:text-primary-700 transition-colors"
               onClick={(e) => e.stopPropagation()}
             >
               <ExternalLink size={16} className="mr-1" />
@@ -102,12 +103,12 @@ const Projects = () => {
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Technologies Used</h3>
               <div className="flex flex-wrap gap-2">
                 {project.technologies.map((tech: string) => (
-                  <span
+                  <Badge
                     key={tech}
-                    className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
-                  >
-                    {tech}
-                  </span>
+                    label={tech}
+                    variant="primary-light"
+                    size="md"
+                  />
                 ))}
               </div>
             </div>
@@ -118,7 +119,7 @@ const Projects = () => {
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center"
+                  className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center"
                 >
                   <ExternalLink size={20} className="mr-2" />
                   View Live Demo
@@ -145,9 +146,9 @@ const Projects = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Projects</h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+          <div className="w-24 h-1 bg-primary-600 mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Here are some of my recent projects that showcase my skills and experience 
+            Here are some of my recent projects that showcase my skills and experience
             in full stack development.
           </p>
         </div>

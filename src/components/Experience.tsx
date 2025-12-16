@@ -1,6 +1,7 @@
 import React from 'react';
 import { Calendar, MapPin } from 'lucide-react';
 import { experience } from '../data/portfolio';
+import Badge from './Badge';
 
 const Experience = () => {
   return (
@@ -8,13 +9,13 @@ const Experience = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Experience</h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+          <div className="w-24 h-1 bg-primary-600 mx-auto"></div>
         </div>
 
         {/* Zig-zag Timeline with straight center line */}
         <div className="relative max-w-6xl mx-auto">
           {/* Center vertical line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-400 to-blue-300 opacity-30"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary-400 to-primary-300 opacity-30"></div>
           
           <div className="space-y-8 relative">
             {experience.map((job, index) => {
@@ -32,7 +33,7 @@ const Experience = () => {
                         <div className="flex justify-between items-start mb-2">
                           <div className="flex-1">
                             <h3 className="text-lg font-bold text-gray-900 mb-1 leading-tight">{job.title}</h3>
-                            <p className="text-blue-600 font-semibold text-base">{job.company}</p>
+                            <p className="text-primary-600 font-semibold text-base">{job.company}</p>
                           </div>
                           <div className="text-right text-xs text-gray-500 ml-3 flex-shrink-0">
                             <div className="flex items-center justify-end mb-1">
@@ -51,7 +52,7 @@ const Experience = () => {
                       <ul className="space-y-1 mb-3">
                         {job.description.map((item, idx) => (
                           <li key={idx} className="text-gray-600 text-sm flex items-start leading-relaxed">
-                            <span className="text-blue-500 mr-2 mt-1 text-xs">▪</span>
+                            <span className="text-primary-500 mr-2 mt-1 text-xs">▪</span>
                             <span className="flex-1">{item}</span>
                           </li>
                         ))}
@@ -60,12 +61,12 @@ const Experience = () => {
                       {/* Technologies with improved styling */}
                       <div className="flex flex-wrap gap-1">
                         {job.technologies.map((tech) => (
-                          <span
+                          <Badge
                             key={tech}
-                            className="bg-gradient-to-r from-blue-50 to-blue-100 text-blue-700 px-2.5 py-1 rounded-full text-xs font-medium border border-blue-200 hover:shadow-sm transition-shadow"
-                          >
-                            {tech}
-                          </span>
+                            label={tech}
+                            variant="primary-light"
+                            size="sm"
+                          />
                         ))}
                       </div>
                     </div>

@@ -121,7 +121,7 @@ export const projects = [
   {
     id: 2,
     title: "SoundBite",
-    description: "AI Meeting Transcription and Summarization",
+    description: "AI Meeting transcription and summarization",
     longDescription: "A comprehensive transcription and summarization platform that created a full-stack application using GCP Speech-to-Text and ChatGPT-3 APIs to generate customized summaries of audio snippets, improving accessibility to spoken content. The system implements secure user authentication with Firebase and manages CRUD operations with Express and Node.js to enable smooth data handling and user account management.",
     image: "/soundbite.png",
     technologies: ["GCP Speech-to-Text", "ChatGPT-3 API", "Firebase", "Express", "Node.js"],

@@ -1,5 +1,6 @@
 import React from 'react';
 import { personalInfo, skills } from '../data/portfolio';
+import Badge from './Badge';
 
 const About = () => {
   return (
@@ -7,78 +8,47 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">About Me</h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+          <div className="w-24 h-1 bg-primary-600 mx-auto"></div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-              Passionate Developer & Problem Solver
-            </h3>
-            <div className="space-y-4 text-gray-600 leading-relaxed">
-              <p>
-                I'm a dedicated full stack developer with a passion for creating innovative 
-                solutions that make a real impact. With multiple years of experience in both frontend 
-                and backend development, I specialize in building scalable, user-centric applications.
-              </p>
-            </div>
+        <div className="flex items-center justify-center mb-12">
 
-            <div className="mt-8 grid grid-cols-2 gap-4">
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-2">Location</h4>
-                <p className="text-gray-600">{personalInfo.location}</p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-2">Email</h4>
-                <a 
-                  href={`mailto:${personalInfo.email}`}
-                  className="text-blue-600 hover:text-blue-700 transition-colors"
-                >
-                  {personalInfo.email}
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div className="space-y-8">
-            <div>
+          <div className="space-y-8 max-w-4xl">
+            <div className="text-center">
               <h4 className="text-xl font-semibold text-gray-900 mb-4">Programming Languages</h4>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 justify-center">
                 {skills.programingLanguages.map((skill) => (
-                  <span
+                  <Badge
                     key={skill}
-                    className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
-                  >
-                    {skill}
-                  </span>
+                    label={skill}
+                    variant="primary-light"
+                  />
                 ))}
               </div>
             </div>
 
-            <div>
+            <div className="text-center">
               <h4 className="text-xl font-semibold text-gray-900 mb-4">Frameworks</h4>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 justify-center">
                 {skills.frameworks.map((skill) => (
-                  <span
+                  <Badge
                     key={skill}
-                    className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium"
-                  >
-                    {skill}
-                  </span>
+                    label={skill}
+                    variant="primary-medium"
+                  />
                 ))}
               </div>
             </div>
 
-            <div>
+            <div className="text-center">
               <h4 className="text-xl font-semibold text-gray-900 mb-4">Other Tools & Technologies</h4>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 justify-center">
                 {skills.otherTools.map((skill) => (
-                  <span
+                  <Badge
                     key={skill}
-                    className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium"
-                  >
-                    {skill}
-                  </span>
+                    label={skill}
+                    variant="primary-dark"
+                  />
                 ))}
               </div>
             </div>
