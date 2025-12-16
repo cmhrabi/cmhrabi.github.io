@@ -17,8 +17,8 @@ export interface BadgeProps {
   variant?: BadgeVariant;
   /**
    * The size of the badge
-   * - sm: px-2.5 py-1 text-xs (for compact areas like Experience)
-   * - md: px-3 py-1 text-sm (default, for main areas like About)
+   * - sm: px-2 py-0.5 text-xs (for compact areas like Experience)
+   * - md: px-2.5 py-1 text-xs (default, for main areas like About)
    */
   size?: BadgeSize;
   /**
@@ -34,8 +34,8 @@ const variantStyles: Record<BadgeVariant, string> = {
 };
 
 const sizeStyles: Record<BadgeSize, string> = {
-  sm: 'px-2.5 py-1 text-xs',
-  md: 'px-3 py-1 text-sm',
+  sm: 'px-2 py-0.5 text-xs',
+  md: 'px-2.5 py-1 text-xs',
 };
 
 /**
@@ -52,7 +52,7 @@ const Badge: React.FC<BadgeProps> = ({
 
   return (
     <span
-      className={`${variantClasses} ${sizeClasses} rounded-lg font-medium ${className}`.trim()}
+      className={`${variantClasses} ${sizeClasses} rounded font-medium ${className}`.trim()}
     >
       {label}
     </span>

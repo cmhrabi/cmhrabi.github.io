@@ -21,7 +21,7 @@ export const skills = {
 export const experience = [
   {
     id: 1,
-    title: "Full-Stack Developer",
+    title: "Back-End Software Developer",
     company: "Kablamo Canada Inc",
     location: "Toronto, ON",
     period: "June 2025 - Present",
@@ -33,7 +33,7 @@ export const experience = [
   },
   {
     id: 2,
-    title: "Full-Stack Software Developer Co-op",
+    title: "Full-Stack Software Developer",
     company: "V2 Cloud Solutions",
     location: "Montreal, QC",
     period: "Sept 2024 - Jan 2025",
@@ -45,7 +45,7 @@ export const experience = [
   },
   {
     id: 3,
-    title: "Back-End Software Developer Co-op",
+    title: "Back-End Software Engineering Co-op",
     company: "Kablamo Canada Inc",
     location: "Toronto, ON",
     period: "Jan 2024 - May 2024",
@@ -58,7 +58,7 @@ export const experience = [
   },
   {
     id: 4,
-    title: "Front-End Software Developer Co-op",
+    title: "Front-End Software Engineering Co-op",
     company: "Kablamo Canada Inc",
     location: "Toronto, ON",
     period: "May 2023 - Aug 2023",
@@ -70,7 +70,7 @@ export const experience = [
   },
   {
     id: 5,
-    title: "Full-Stack Developer Co-op",
+    title: "Full-Stack Engineering Co-op",
     company: "Vluence",
     location: "Remote",
     period: "Sept 2022 - May 2023",
@@ -83,7 +83,7 @@ export const experience = [
   },
   {
     id: 6,
-    title: "Software Developer Co-op",
+    title: "Software Engineering Co-op",
     company: "Environment and Climate Change Canada",
     location: "Gatineau, QC",
     period: "Jan 2022 - April 2022",
@@ -121,7 +121,7 @@ export const projects = [
   {
     id: 2,
     title: "SoundBite",
-    description: "AI Meeting transcription and summarization",
+    description: "AI transcription and summarization for meetings and audio snippets",
     longDescription: "A comprehensive transcription and summarization platform that created a full-stack application using GCP Speech-to-Text and ChatGPT-3 APIs to generate customized summaries of audio snippets, improving accessibility to spoken content. The system implements secure user authentication with Firebase and manages CRUD operations with Express and Node.js to enable smooth data handling and user account management.",
     image: "/soundbite.png",
     technologies: ["GCP Speech-to-Text", "ChatGPT-3 API", "Firebase", "Express", "Node.js"],
