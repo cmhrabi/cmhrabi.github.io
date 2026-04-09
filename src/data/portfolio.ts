@@ -21,7 +21,7 @@ export const skills = {
 export const experience = [
   {
     id: 1,
-    title: "Back-End Software Developer",
+    title: "Software Engineer",
     company: "Kablamo Canada Inc",
     location: "Toronto, ON",
     period: "June 2025 - Present",
@@ -29,7 +29,7 @@ export const experience = [
       "Developed backend microservices using Go and AWS to manage requests for a Fin-tech Mobile Application",
       "Improved domain model for the product fulfillment service to support new features and improve scalability"
     ],
-    technologies: ["Go", "AWS", "React Native", "Terraform"]
+    technologies: ["Go", "Python", "AWS", "React", "Terraform"]
   },
   {
     id: 2,
