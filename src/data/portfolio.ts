@@ -109,6 +109,17 @@ export type Project = {
 export const projects = [
   {
     id: 1,
+    title: "Golden Hour",
+    description: "A geospatial web app that helps Torontonians find the sunniest patios in real time.",
+    longDescription: "A geospatial web app that tracks where sunlight is falling across Toronto right now, ranking patios by how much sun they'll get throughout the day. Users can scrub through time from sunrise to sunset, check the week ahead, and save favourite patios. Built with Next.js and Mapbox GL on top of a custom design system with its own design tokens, theming, and Storybook docs, backed by Supabase.",
+    image: "/golden-hour-map.png",
+    modalImage: "/golden-hour.png",
+    technologies: ["TypeScript", "Next.js", "React", "Tailwind CSS", "Mapbox GL", "Supabase", "Storybook"],
+    liveUrl: "https://golden-hour.app",
+    githubUrl: "https://github.com/cmhrabi/patio-finder"
+  },
+  {
+    id: 2,
     title: "Compass",
     description: "A tool that helps users analyze the LCCA for different technologies and scenarios.",
     longDescription: "A tool that helps users analyze the levelized cost of carbon abatement for different technologies and scenarios.",
@@ -117,15 +128,6 @@ export const projects = [
     technologies: ["TypeScript", "React", "Tailwind CSS", "Python", "Flask"],
     liveUrl: "https://compasslcca.netlify.app",
     githubUrl: "https://github.com/cmhrabi/abbcari-LCCA-ammonia"
-  },
-  {
-    id: 2,
-    title: "SoundBite",
-    description: "AI transcription and summarization for meetings and audio snippets",
-    longDescription: "A comprehensive transcription and summarization platform that created a full-stack application using GCP Speech-to-Text and ChatGPT-3 APIs to generate customized summaries of audio snippets, improving accessibility to spoken content. The system implements secure user authentication with Firebase and manages CRUD operations with Express and Node.js to enable smooth data handling and user account management.",
-    image: "/soundbite.png",
-    technologies: ["GCP Speech-to-Text", "ChatGPT-3 API", "Firebase", "Express", "Node.js"],
-    githubUrl: "https://github.com/cmhrabi/soundbite-ai"
   },
   {
     id: 3,
