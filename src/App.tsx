@@ -1,7 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './pages/Home';
-import ProjectsPage from './pages/ProjectsPage';
 import Footer from './components/Footer';
 
 function App() {
@@ -10,7 +9,7 @@ function App() {
       <div className="min-h-screen">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/projects" element={<Navigate to="/#projects" replace />} />
         </Routes>
         <Footer />
       </div>

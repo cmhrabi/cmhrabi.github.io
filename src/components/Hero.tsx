@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { ArrowDown } from 'lucide-react';
 import { personalInfo } from '../data/portfolio';
 
@@ -14,7 +13,7 @@ const Hero = () => {
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center bg-primary-900 relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
+        <div className="text-center motion-safe:animate-zoom-in">
           <div className="mb-8">
             <img
               src={personalInfo.avatar}
@@ -32,24 +31,24 @@ const Hero = () => {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
-            <Link
-              to="/projects"
-              className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded text-base font-medium transition-colors flex items-center gap-2"
+          <div className="flex gap-8 justify-center items-center mb-10">
+            <button
+              onClick={() => scrollToSection('projects')}
+              className="text-white hover:text-gray-300 underline-offset-4 hover:underline text-base font-medium transition-colors"
             >
-              My Work
-            </Link>
+              my work
+            </button>
             <a
               href={personalInfo.resumeUrl}
               download
-              className="border border-primary-400 text-primary-400 hover:bg-primary-400 hover:text-white px-8 py-3 rounded text-base font-medium transition-colors flex items-center gap-2"
+              className="text-white hover:text-gray-300 underline-offset-4 hover:underline text-base font-medium transition-colors"
             >
-              Resume
+              resume
             </a>
           </div>
 
           <button
-            onClick={() => scrollToSection('about')}
+            onClick={() => scrollToSection('projects')}
             className="text-gray-600 hover:text-gray-400 transition-colors"
           >
             <ArrowDown size={24} />

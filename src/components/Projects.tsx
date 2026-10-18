@@ -140,8 +140,13 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-12 bg-transparent">
+    <section id="projects" className="py-12 bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">Projects</h2>
+          <div className="w-12 h-px bg-primary-600 mx-auto"></div>
+        </div>
+
         {/* All Projects */}
         <div className="flex flex-col gap-6">
           {projects.map((project) => (
