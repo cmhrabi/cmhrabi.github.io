@@ -22,25 +22,25 @@ const Experience = () => {
               const isEven = index % 2 === 0;
 
               return (
-                <div key={job.id} className="relative flex items-center" style={{ minHeight: '150px' }}>
+                <div key={job.id} className="relative flex items-center md:min-h-[150px]">
                   {/* Card */}
-                  <div className={`w-7/12 ${isEven ? 'mr-auto pr-6' : 'ml-auto pl-6'}`}>
+                  <div className={`w-full md:w-7/12 ${isEven ? 'md:mr-auto md:pr-6' : 'md:ml-auto md:pl-6'}`}>
                     <div className={`bg-white rounded-lg shadow-sm p-4 hover:shadow-md transition-shadow border border-gray-200 ${
-                      isEven ? 'mr-3' : 'ml-3'
+                      isEven ? 'md:mr-3' : 'md:ml-3'
                     }`}>
                       {/* Header */}
                       <div className="mb-2">
-                        <div className="flex justify-between items-start mb-1">
+                        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-1 md:gap-0 mb-1">
                           <div className="flex-1">
                             <h3 className="text-base font-bold text-gray-900 leading-tight">{job.title}</h3>
                             <p className="text-primary-600 font-medium text-sm">{job.company}</p>
                           </div>
-                          <div className="text-right text-xs text-gray-500 ml-2 flex-shrink-0">
-                            <div className="flex items-center justify-end mb-0.5">
+                          <div className="flex flex-wrap gap-x-3 gap-y-0.5 md:block md:text-right text-xs text-gray-500 md:ml-2 md:flex-shrink-0">
+                            <div className="flex items-center md:justify-end md:mb-0.5">
                               <Calendar size={11} className="mr-1" />
                               <span>{job.period}</span>
                             </div>
-                            <div className="flex items-center justify-end">
+                            <div className="flex items-center md:justify-end">
                               <MapPin size={11} className="mr-1" />
                               <span>{job.location}</span>
                             </div>
